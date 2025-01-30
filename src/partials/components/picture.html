@@ -1,4 +1,5 @@
 <picture class="{{image.class}}">
   <!-- <source type="image/png" srcset="/assets/img/waterfall.webp" alt="Пример сайта" /> -->
-  <img src="{{image.path}}" width="630" height="420" alt="{{image.alt}}" loading="lazy" />
+  <img src="{{image.path}}" {{#if image.w}}width="{{image.w}}" {{/if}} {{#if image.h}}height="{{image.h}}" {{/if}}
+    alt="{{image.title}}" loading="lazy" />
 </picture>

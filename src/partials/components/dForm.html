@@ -1,10 +1,21 @@
-<form action="/submit" method="post" class="space-y-4">
+<form action="/submit" method="post" class="space-y-4 mb-8">
   {{#if form.fields.Name}}
   <div class="form-control">
-    <label for="name" class="label">
-      <span class="label-text">Имя</span>
-    </label>
-    <input id="name" name="name" type="text" class="input input-bordered w-full" placeholder="Введите имя" />
+    <!-- <label for="name" class="label">
+      <span class="label-text">{{form.placeholder.name}}</span>
+    </label> -->
+    <input id="name" name="name" type="text" class="input input-bordered w-full"
+      placeholder="{{form.placeholder.name}}" />
+  </div>
+  {{/if}}
+
+  {{#if form.fields.Phone}}
+  <div class="form-control">
+    <!-- <label for="name" class="label">
+      <span class="label-text">{{form.placeholder.name}}</span>
+    </label> -->
+    <input id="phone" name="phone" type="text" class="input input-bordered w-full"
+      placeholder="{{form.placeholder.phone}}" />
   </div>
   {{/if}}
 
@@ -79,7 +90,8 @@
 
   {{#if form.fields.button}}
   <div class="form-control">
-    <button type="submit" class="btn btn-primary">Отправить</button>
+    <button type="submit" class="{{form.submit.class}}">{{form.submit.cta}}</button>
   </div>
   {{/if}}
+
 </form>

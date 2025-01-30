@@ -1,7 +1,7 @@
 import { defineConfig } from "vite";
 import path from 'path'
 
-// import handlebars from "vite-plugin-handlebars";
+import handlebars from "vite-plugin-handlebars";
 import { resolve } from "path";
 import viteImagemin from "@vheemstra/vite-plugin-imagemin";
 import imageminMozjpeg from "imagemin-mozjpeg";
@@ -10,23 +10,23 @@ import imageminGifsicle from "imagemin-gifsicle";
 import imageminSvgo from "imagemin-svgo";
 import imageminWebp from "imagemin-webp";
 
-// import { contextData } from "./data/data";
-// import  Helpers from "./Hbs-helpers";
+import { contextData } from "./src/data/data";
+import  Helpers from "./Hbs-helpers";
 
-// function handlebarsOverride(options) {
-//   const plugin = handlebars(options);
-//   // Currently handleHotUpdate skips further processing, which bypasses
-//   // postcss and in turn tailwind doesn't pick up file changes
-//   delete plugin.handleHotUpdate;
-//   return plugin;
-// }
+function handlebarsOverride(options) {
+  const plugin = handlebars(options);
+  // Currently handleHotUpdate skips further processing, which bypasses
+  // postcss and in turn tailwind doesn't pick up file changes
+  delete plugin.handleHotUpdate;
+  return plugin;
+}
 
 export default defineConfig({
   root: "./",
-  base: "/wp-content/themes/vite-starter-test/", // for deploy to gh-pages base = outDir
+  base: "/real-estate-guide/", // for deploy to gh-pages base = outDir
   build: {
-    outDir: "../dist",
-    emptyOutDir: true,
+    // outDir: "../dist",
+    // emptyOutDir: true,
     rollupOptions: {
       input: "index.html",
       external: ["/data.js"],
@@ -49,17 +49,17 @@ export default defineConfig({
     },
   },
   plugins: [
-    // handlebarsOverride({
-    //   context(pagePath) {
-    //     return contextData[pagePath];
-    //   },
-    //   partialDirectory: [
-    //     resolve(__dirname, "./src/partials"),
-    //     resolve(__dirname, "./src/partials/layout"),
-    //     resolve(__dirname, "./src/partials/sections"),
-    //     resolve(__dirname, "./src/partials/components"),
-    //   ],
-    // }),
+    handlebarsOverride({
+      context(pagePath) {
+        return contextData[pagePath];
+      },
+      partialDirectory: [
+        resolve(__dirname, "./src/partials"),
+        resolve(__dirname, "./src/partials/layout"),
+        resolve(__dirname, "./src/partials/sections"),
+        resolve(__dirname, "./src/partials/components"),
+      ],
+    }),
     // handlebars({}),
     process.env.NODE_ENV === "production" &&
       viteImagemin({

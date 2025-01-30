@@ -1,4 +1,8 @@
-<div class="text-center mb-8">
-  <h2 class="text-4xl font-bold">{{section.title}}</h2>
+<div class="mb-8">
+  {{#if title}}
+  <h2 class="text-4xl font-bold {{section.headingClass}}">{{section.title}}</h2>
+  {{/if}}
+  {{#if description}}
   <p class="text-xl text-primary-content">{{section.description}}</p>
+  {{/if}}
 </div>

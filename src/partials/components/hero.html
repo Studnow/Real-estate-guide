@@ -1,13 +1,13 @@
-<div class="hero min-h-screen bg-hero-clear">
-  <div class="hero-overlay bg-opacity-60"></div>
-  <div class="hero-content text-neutral-content text-center">
-    {{>form}}
-    <div class="max-w-md">
-      <h1 class="mb-5 text-5xl font-bold">{{sections.heroSec.title}}</h1>
-      <p class="mb-5">
-        {{sections.heroSec.description}}
-      </p>
-      <button class="btn btn-primary">Get Started</button>
+<div class="container mx-auto">
+  <div class="hero min-h-[768px] place-content-start max-w-screen-2xl md:translate-y-24">
+    <div class="hero-content justify-start text-center md:text-left w-full">
+      <div class="xl:max-w-4xl">
+        <h1 class="mb-12 text-4xl lg:text-6xl lg:!leading-[5.5rem] font-bold font-sans text-accent">{{title}}</h1>
+        <p class="mb-12 font-sans lg:text-2xl font-normal max-w-lg xl:max-w-3xl">
+          {{description}}
+        </p>
+        <button class="btn btn-primary text-base-100 w-52">{{cta}}</button>
+      </div>
     </div>
   </div>
 </div>

@@ -1,8 +1,14 @@
-<ul class="card-list">
-  {{#each items}}
-  <li class="flex items-startp-2 gap-2">
-    <span class="icon w-6 h-6">{{{icon}}}</span>
-    <span class="text">{{text}}</span>
+<ul class="{{class}} lg:justify-center">
+  {{#each list-items}}
+  <li>
+    {{#if link}}
+    <a class="{{class}} text-accent" href="{{href}}">
+      <span class="icon w-6 h-6">{{{icon}}}</span>
+      <span class="border-b-2 border-accent py-1 hidden md:block">{{text}}</span>
+    </a>
+    {{else}}
+    {{this}}
+    {{/if}}
   </li>
   {{/each}}
 </ul>

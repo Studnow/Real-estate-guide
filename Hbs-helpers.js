@@ -29,5 +29,8 @@ function generateCards(count) {
 
 export const cards = generateCards(10); // Генерация 10 карточек - тестовые данные для проверки наполнения компонентов контентом
 
+Handlebars.registerHelper("incrementedIndex", function (index) {
+  return index + 1;
+});
 
 export default Handlebars;
