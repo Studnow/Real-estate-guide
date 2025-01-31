@@ -24,7 +24,7 @@ function handlebarsOverride(options) {
 }
 
 export default defineConfig({
-  root: "./",
+  // root: "./",
   base: isProduction ? './' : "/", // for deploy to gh-pages base = outDir
   build: {
     outDir: "real-estate-guide",
