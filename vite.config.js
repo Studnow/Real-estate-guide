@@ -23,9 +23,9 @@ function handlebarsOverride(options) {
 
 export default defineConfig({
   root: "./",
-  base: "./real-estate-guide", // for deploy to gh-pages base = outDir
+  base: "/real-estate-guide/", // for deploy to gh-pages base = outDir
   build: {
-    outDir: "./real-estate-guide",
+    outDir: "real-estate-guide",
     // outDir: "../dist",
     // emptyOutDir: true,
     rollupOptions: {
