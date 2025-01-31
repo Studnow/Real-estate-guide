@@ -1,6 +1,7 @@
 export default {
   footer: {
-    socialClass: 'w-16 h-16',
+    logo: { img: "/logo.png", text: "Гид по недвижимости", class: "text-sm xl:text-base" },
+    socialClass: "w-16 h-16",
     social: [
       { title: "youtube", href: "#s", icon: "/assets/icons/social-icons/yt.svg" },
       { title: "vk", href: "#s", icon: "/assets/icons/social-icons/vk.svg" },

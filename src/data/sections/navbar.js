@@ -1,6 +1,6 @@
 export default {
   navbar: {
-    left: "my left header",
+    logo: { img: "/logo.png", text: "Гид по недвижимости", class: "hidden lg:inline-block text-sm xl:text-base" },
     center: {
       components: { showMenu: false, showContacts: true },
       list: {

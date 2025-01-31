@@ -5,23 +5,14 @@
   </a>
   {{/each}}
 </aside>
-<nav>
-  <h6 class="footer-title">Services</h6>
-  <a class="link link-hover">Branding</a>
-  <a class="link link-hover">Design</a>
-  <a class="link link-hover">Marketing</a>
-  <a class="link link-hover">Advertisement</a>
-</nav>
-<nav>
-  <h6 class="footer-title">Company</h6>
-  <a class="link link-hover">About us</a>
-  <a class="link link-hover">Contact</a>
-  <a class="link link-hover">Jobs</a>
-  <a class="link link-hover">Press kit</a>
-</nav>
-<nav>
-  <h6 class="footer-title">Legal</h6>
-  <a class="link link-hover">Terms of use</a>
-  <a class="link link-hover">Privacy policy</a>
-  <a class="link link-hover">Cookie policy</a>
+<p>
+  {{#each footer.business}}
+  <span class="link link-hover">{{this}}</span>
+  {{/each}}
+</p>
+<nav class="flex flex-col items-center">
+  {{#each footer.policy}}
+  <a class="link link-hover">{{this}}</a>
+  {{/each}}
+  <a href="{{href}}" class="link no-underline flex items-center">{{>logo footer}}</a>
 </nav>

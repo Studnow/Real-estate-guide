@@ -1,13 +1,17 @@
 export default {
   cards: {
-    wrapperClass: "cards grid gap-12",
+    wrapperClass: "cards grid gap-12 md:grid-cols-2 md:items-center",
     headingClass: "text-accent",
     title: "Что проверяем",
     description: false,
     cardB: [
       {
-        cardClass: "flex-row justify-end items-center bg-house bg-left bg-no-repeat w-full h-[362px]",
-        cardBTitle: "Проверяем историю объекта недвижимости",
+        cardClass:
+          "lg:flex-row justify-end items-center bg-house bg-cover bg-left bg-no-repeat  w-full min-h-[236px] lg:h-[362px]",
+        cardBTitle: {
+          class: "card-title text-sm md:text-lg lg:text-2xl text-accent w-[35%] lg:w-1/2 self-end",
+          text: "Проверяем историю объекта недвижимости",
+        },
         cardBImg: {
           alt: "house history",
           class: "rounded-lg p-6 ",
@@ -19,7 +23,7 @@ export default {
         cardActions: false,
         cardPicture: false,
         cardBBtn: "CardB 1 Buy now!",
-        listClass: 'w-1/2 translate-x-10',
+        listClass: "text-base lg:w-full lg:translate-x-10",
         list: [
           "Проверка по объявлениям и базам продаж",
           "Проверка по надзорным ведомствам",
@@ -27,8 +31,12 @@ export default {
         ],
       },
       {
-        cardClass: "flex-row justify-end items-center bg-plan bg-left bg-no-repeat w-full h-[362px]",
-        cardBTitle: "Проверяем характеристики объекта недвижимости",
+        cardClass:
+          "flex-row justify-end items-center bg-plan bg-cover bg-left bg-no-repeat w-full min-h-[236px] lg:h-[362px]",
+        cardBTitle: {
+          class: "card-title text-sm md:text-lg lg:text-2xl text-accent w-[35%] lg:w-1/2 self-end",
+          text: "Проверяем характеристики объекта недвижимости",
+        },
         cardBImg: {
           alt: "Card image",
           class: "rounded-lg p-6 ",
@@ -40,7 +48,7 @@ export default {
         cardActions: false,
         cardPicture: false,
         cardBBtn: "CardB 2 Buy now!",
-        listClass: 'w-1/2 translate-x-10',
+        listClass: "text-base lg:w-full lg:translate-x-10",
         list: [
           "Проверка на наличие/отсутствие права собственности на объект недвижимости",
           "Проверка документации на объект недвижимости",
@@ -49,8 +57,12 @@ export default {
         ],
       },
       {
-        cardClass: "flex-row justify-end items-center bg-woman bg-left bg-no-repeat w-full h-[362px]",
-        cardBTitle: "Проверяем продавца",
+        cardClass:
+          "flex-row justify-end items-center bg-woman bg-cover bg-left bg-no-repeat  w-full min-h-[236px] lg:h-[362px]",
+        cardBTitle: {
+          class: "card-title text-sm md:text-lg lg:text-2xl text-accent w-[35%] lg:w-1/2 self-end",
+          text: "Проверяем продавца",
+        },
         cardBImg: {
           alt: "Card image",
           class: "rounded-lg p-6",
@@ -62,7 +74,7 @@ export default {
         cardActions: false,
         cardPicture: false,
         cardBBtn: "CardB 3 Buy now!",
-        listClass: 'w-1/2 translate-x-10',
+        listClass: "text-base lg:w-full lg:translate-x-10",
         list: [
           "На наличие несовершеннолетних детей (справка)",
           "На недееспособность граждан",
@@ -74,8 +86,12 @@ export default {
         ],
       },
       {
-        cardClass: "flex-row justify-end items-center bg-floors bg-left bg-no-repeat w-full h-[362px]",
-        cardBTitle: "Проверяем отсутствие прав третьих лиц",
+        cardClass:
+          "flex-row justify-end items-center bg-floors bg-cover bg-left bg-no-repeat  w-full min-h-[236px] lg:h-[362px]",
+        cardBTitle: {
+          class: "card-title text-sm md:text-lg lg:text-2xl text-accent w-[35%] lg:w-1/2 self-end",
+          text: "Проверяем отсутствие прав третьих лиц",
+        },
         cardBImg: {
           alt: "Card image",
           class: "rounded-lg p-6",
@@ -87,7 +103,7 @@ export default {
         cardActions: false,
         cardPicture: false,
         cardBBtn: "CardB 3 Buy now!",
-        listClass: 'w-1/2 translate-x-10',
+        listClass: "text-base lg:w-full lg:translate-x-10",
         list: [
           "Проверка на наличие споров в судах общей юрисдикции РФ",
           "Проверка на наличие споров в арбитражных судах РФ",

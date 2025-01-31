@@ -1,6 +1,6 @@
-<form action="/submit" method="post" class="space-y-4 mb-8">
+<form action="/submit" method="post" class="{{form.formClass}}">
   {{#if form.fields.Name}}
-  <div class="form-control">
+  <div class="form-control {{form.controlClass}}">
     <!-- <label for="name" class="label">
       <span class="label-text">{{form.placeholder.name}}</span>
     </label> -->
@@ -93,5 +93,4 @@
     <button type="submit" class="{{form.submit.class}}">{{form.submit.cta}}</button>
   </div>
   {{/if}}
-
 </form>

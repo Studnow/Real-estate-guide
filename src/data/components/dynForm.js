@@ -1,7 +1,16 @@
 export default {
   form: {
-    title: 'Оставьте заявку и получите чек-лист по покупке недвижимости',
-    headingClass: 'text-accent',
+    title: "Оставьте заявку и получите чек-лист по покупке недвижимости",
+    headingClass: "text-3xl lg:text-4xl text-accent lg:w-1/2",
+    formClass: "gap-4 flex flex-col md:flex-row lg:w-[55%] mb-4",
+    controlClass: "",
+    img: {
+      path: "/assets/img/form_1.png",
+      title: "Tablet & pen",
+      class: "relative right-10 md:absolute lg:right-10 xl:-top-10 md:w-80 md:hidden lg:block lg:w-1/3",
+      w: "786",
+      h: "452",
+    },
     fields: {
       Email: false,
       Name: true,
@@ -18,9 +27,42 @@ export default {
       toggle: false,
     },
     placeholder: {
-      name: 'Имя',
-      phone: 'Номер телефона'
+      name: "Имя",
+      phone: "Номер телефона",
     },
-    submit: {cta: 'Получить чек-лист', class:'btn btn-primary text-base-100 text-lg'},
+    submit: { cta: "Получить чек-лист", class: "btn btn-primary text-base-100 text-base" },
+  },
+  form_2: {
+    title: "Оставьте заявку и получите чек-лист по покупке недвижимости",
+    headingClass: "text-3xl lg:text-4xl text-accent lg:w-1/2",
+    formClass: "gap-4 flex flex-col md:flex-row max-w-screen-lg",
+    controlClass: "",
+    img: {
+      path: "/assets/img/form_2.png",
+      title: "Tablet & pen",
+      class: "relative md:absolute lg:right-10 lg:-top-10 md:hidden lg:block lg:w-1/3 xl:w-1/4",
+      w: "786",
+      h: "452",
+    },
+    fields: {
+      Email: false,
+      Name: true,
+      Phone: true,
+      button: true,
+      check: false,
+      radio: false,
+      select: false,
+      file: false,
+      range: false,
+      rating: false,
+      text: false,
+      textArea: false,
+      toggle: false,
+    },
+    placeholder: {
+      name: "Имя",
+      phone: "Номер телефона",
+    },
+    submit: { cta: "Получить чек-лист", class: "btn btn-primary text-base-100 lg:text-lg" },
   },
 };

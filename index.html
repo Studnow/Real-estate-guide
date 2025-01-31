@@ -29,15 +29,21 @@
       {{>header sections.header.navbar}}
       {{>hero sections.heroSec.hero}}
     </header>
-    <main class="main mb-4 px-4">
-      {{>card-list items=sections.heroSec.hero.heroCards}}
-      {{>slider sections.sliderSec.slider}}
-      <div class="container mx-auto mb-12">
-        {{>form-section form=dynForm.form}}
+    <main class="main mb-4 px-4 mx-auto">
+      <div class="container-fluid bg-smooth-transparent w-full bg-hero-card z-10 -translate-y-24">
+        {{>card-list items=sections.heroSec.hero.heroCards}}
       </div>
+      {{>slider sections.sliderSec.slider}}
+      {{>form-section form=dynForm.form}}
       {{>cards sections.cardsSec.cards}}
+      {{>price sections.priceSec.price}}
+      <div class="container mx-auto mb-16">
+        {{>section-title section=sections.extraCards.heading}}
+        {{>card-list items=sections.extraCards.cards}}
+      </div>
+      {{>form-section form=dynForm.form_2}}
     </main>
-    <footer class="footer bg-base-300 text-base-content p-10">
+    <footer class="footer bg-base-100 text-center place-items-center text-base-content p-10">
       {{>footer sections.footer}}
     </footer>
   </div>
