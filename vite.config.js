@@ -13,6 +13,8 @@ import imageminWebp from "imagemin-webp";
 import { contextData } from "./src/data/data";
 import  Helpers from "./Hbs-helpers";
 
+const isProduction = process.env.NODE_ENV === 'production';
+
 function handlebarsOverride(options) {
   const plugin = handlebars(options);
   // Currently handleHotUpdate skips further processing, which bypasses
@@ -23,7 +25,7 @@ function handlebarsOverride(options) {
 
 export default defineConfig({
   root: "./",
-  base: "real-estate-guide", // for deploy to gh-pages base = outDir
+  base: isProduction ? './' : "/", // for deploy to gh-pages base = outDir
   build: {
     outDir: "real-estate-guide",
     // outDir: "../dist",
